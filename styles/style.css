@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    overflow-x: hidden;
+}
+
+/* header */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #F7F6F0;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bolder;
+}
+
+header .navbar a {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    color: #000;
+}
+
+header .navbar a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+header .log-icon a {
+    font-size: 1.2rem;
+    color: #000;
+    margin-left: 1.5rem;
+}
+
+header .log-icon a:hover {
+    color: pink;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 1.5rem;
+    color: #000;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    display: none !important;
+}
+
+/* section */
+section {
+    padding: 2rem 9%;
+}
+
+/* section content */
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../assets/home-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 30rem;
+}
+
+.home .content h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #000;
+}
+
+.home .content span {
+    font-size: 1rem;
+    color: pink;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p {
+    font-size: .7rem;
+    color: grey;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background: #C3BDB6;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: pink;
+}
+
+/* footer */
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2rem;
+}
+
+.footer .box-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .box-container .box-social .fa-brands {
+    padding: 0.2rem 0;
+}
+
+.footer .box-container .box {
+    flex: 1 1 10rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: .8rem;
+    padding: 0.5rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+.footer .box-container .box i {
+    font-size: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    font-size: 1rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span {
+    color: pink;
+}
+
+/* media queries */
+@media (max-width:992px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block !important;
+    }
+
+    header .navbar {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #DFDED9;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: .6rem;
+        padding: .6rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block !important;
+    }
+
+    section .home {
+        min-height: 20vh;
+    }
+
+    .home .content {
+        margin: 30px;
+    }
+
+    .home .content h2 {
+        font-size: 2rem;
+    }
+
+    .home .content span {
+        font-size: 1.5rem;
+    }
+
+    .home .content p {
+        font-size: .6rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
